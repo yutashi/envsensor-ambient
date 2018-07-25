@@ -1,0 +1,2 @@
+git+https://github.com/AmbientDataInc/ambient-python-lib.git
+https://github.com/isaaxug/omron_envsensor/archive/0.0.2.zip
