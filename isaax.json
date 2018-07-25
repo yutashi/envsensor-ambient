@@ -2,11 +2,10 @@
   "name": "Envsensor Ambient",
   "version": "",
   "description": "",
-  "main": "run.py",
   "author": "",
   "license": "",
   "language":"python",
   "scripts": {
-	"start": "python3 -u run.py"
+	"start": "python3 -u sample1.py"
   }
 }
