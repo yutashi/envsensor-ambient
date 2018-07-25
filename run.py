@@ -94,7 +94,7 @@ BLUETHOOTH_DEVICEID = os.environ.get('BLUETHOOTH_DEVICEID', 0)
 BLUETHOOTH_DEVICE_ADDRESS = os.environ.get('BLUETHOOTH_DEVICE_ADDRESS', 'DDF4AECB2D68')
 CHECK_SPAN = int(os.environ.get('CHECK_SPAN', '10'))
 
-AMBIENT_CHANNEL_ID = os.environ['AMBIENT_CHANNEL_ID']
+AMBIENT_CHANNEL_ID = int(os.environ['AMBIENT_CHANNEL_ID'])
 AMBIENT_WRITE_KEY = os.environ['AMBIENT_WRITE_KEY']
 
 o = EnvStatus(bt=BLUETHOOTH_DEVICEID)
@@ -128,3 +128,4 @@ while True:
 
         latest_update = data.tick_last_update
 
+    time.sleep(CHECK_SPAN)
