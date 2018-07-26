@@ -48,7 +48,7 @@ class EnvStatus(Thread):
 
         logger.debug('filters is %s', self.filters)
 
-    def getNewlestData(self, uId):
+    def getLatestData(self, uId):
         return self.filters[uId][1]
 
     def callback(self, beacon):

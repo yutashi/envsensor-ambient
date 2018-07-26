@@ -11,18 +11,15 @@ CHECK_SPAN = int(os.environ.get('CHECK_SPAN', '10'))
 
 o = EnvStatus(bt=BLUETHOOTH_DEVICEID)
 o.start()
-
 uId = o.setRequest(BLUETHOOTH_DEVICE_ADDRESS)
+
 latest_update = datetime.datetime.now()
-
 while True:
-
-    data = o.getNewlestData(uId)
-
+    data = o.getLatestData(uId)
     if data is not None:
 
         if data.tick_last_update > latest_update:
-            print(data.val_light)
+            print('Illumination: {} lx'.format(data.val_light))
 
         latest_update = data.tick_last_update
 
