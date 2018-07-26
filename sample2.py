@@ -31,13 +31,6 @@ while True:
             am.send({
                 'created': data.tick_last_update.strftime('%Y-%m-%d %H:%M:%S'),
                 'd1': data.val_temp,
-                'd2': data.val_pressure,
-                'd3': data.val_humi,
-                'd4': data.val_light,
-                'd5': data.val_uv,
-                'd6': data.val_noise,
-                'd7': data.rssi,
-                'd8': data.val_battery,
                 }
             )
 
