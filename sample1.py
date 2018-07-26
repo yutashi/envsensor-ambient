@@ -13,8 +13,8 @@ BLUETOOTH_DEVICE_ADDRESS = os.environ.get('BLUETOOTH_DEVICE_ADDRESS', None)
 if BLUETOOTH_DEVICE_ADDRESS is None:
     sys.exit('No sensors found')
 
-uId = o.setRequest(BLUETOOTH_DEVICE_ADDRESS)
 o = EnvStatus(bt=BLUETOOTH_DEVICEID)
+uId = o.setRequest(BLUETOOTH_DEVICE_ADDRESS)
 o.start()
 
 latest_update = datetime.datetime.now()
