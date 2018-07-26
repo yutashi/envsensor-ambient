@@ -8,17 +8,17 @@ import datetime
 
 AMBIENT_CHANNEL_ID = int(os.environ['AMBIENT_CHANNEL_ID'])
 AMBIENT_WRITE_KEY = os.environ['AMBIENT_WRITE_KEY']
-BLUETHOOTH_DEVICEID = os.environ.get('BLUETHOOTH_DEVICEID', 0)
+BLUETOOTH_DEVICEID = os.environ.get('BLUETOOTH_DEVICEID', 0)
 CHECK_SPAN = int(os.environ.get('CHECK_SPAN', '30'))
 
-o = EnvStatus(bt=BLUETHOOTH_DEVICEID)
+o = EnvStatus(bt=BLUETOOTH_DEVICEID)
 o.start()
 
 am = ambient.Ambient(AMBIENT_CHANNEL_ID, AMBIENT_WRITE_KEY)
 
 latest_update = datetime.datetime.now()
 while True:
-    mac = os.environ.get('BLUETHOOTH_DEVICE_ADDRESS', None)
+    mac = os.environ.get('BLUETOOTH_DEVICE_ADDRESS', None)
     if mac is None:
         print('No sensors found.')
         time.sleep(CHECK_SPAN)
