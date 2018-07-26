@@ -20,6 +20,7 @@ while True:
         continue
 
     uId = o.setRequest(mac)
+    time.sleep(CHECK_SPAN)
     data = o.getLatestData(uId)
     if data is not None:
 
@@ -29,4 +30,3 @@ while True:
         latest_update = data.tick_last_update
 
     o.rmRequest(uId)
-    time.sleep(CHECK_SPAN)
